@@ -1,0 +1,47 @@
+.container{
+    padding: 16px 4px;
+}
+
+.buttonStyle{
+    padding: 8px 26px;
+    display: flex;
+    gap: 16px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 6px;
+    border-top: 1px solid var(--Dark-Grey);
+    border-right: 7px solid var(--Dark-Grey);
+    border-bottom: 7px solid var(--Dark-Grey);
+    border-left: 1px solid var(--Dark-Grey);
+    box-shadow: 2px 2px 4px 0px rgba(0, 0, 0, 0.25);
+    cursor: pointer;
+    font-family: "Fira Sans";
+    font-weight: 600;
+    line-height: normal;
+    font-size: 20px;
+    text-align: left;
+    flex-wrap: wrap;
+}
+
+.ctaButton{
+    background: var(--Primary);
+    color: #fff;
+}
+
+.buttonText {
+    flex: 1 1 0;
+}
+
+.backButton {
+    background: #fff;
+    color: #000;
+    flex-direction: row-reverse;
+    justify-content: center;
+    flex-wrap: wrap-reverse;
+}
+
+.backButton .buttonText {
+    flex: 0;
+}
+
