@@ -7,7 +7,6 @@ import
     {   
         ham,
         navMenu,
-        navLink,
         container,
         logoAndHam,
         logoContainer,
