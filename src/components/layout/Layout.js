@@ -1,11 +1,10 @@
 import * as React from 'react'
+import Nav from '../blocks/Nav'
 
 const Layout = ({ children }) => {
     return (
         <div>
-            <nav>
-                Nav
-            </nav>
+            <Nav />
             <main>
                 {children}
             </main>
