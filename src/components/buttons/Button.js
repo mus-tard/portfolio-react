@@ -9,8 +9,7 @@ import
         buttonText,
         buttonStyle,
 
-    } 
-from "./button.module.css"
+    } from "./button.module.css"
 
 
 function ButtonCta({label, type}) {

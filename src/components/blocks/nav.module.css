@@ -1,0 +1,53 @@
+.container {
+
+
+}
+
+.logoAndHam {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoContainer {
+    width: 214px;
+}
+
+.ham {
+    
+}
+
+
+
+.navMenu {
+    visibility:none;
+    opacity: 0;
+}
+
+.mobileVisible {
+    visibility: visible;
+    opacity: 1;
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    padding: 16px 0;
+    transition: visibility 0s, opacity 0.5s ease-in-out;
+}
+
+
+.mobileVisible a {
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 0 0;
+    border-radius: 10px;
+    background: var(--white, #848CED);
+    border: 1px solid var(--Primary, #4F5AD0);
+    text-decoration: none;
+    color: var(--Primary);
+    font-size: 20px;
+    font-family: "Fira Sans";
+    font-weight: 600;
+}
+

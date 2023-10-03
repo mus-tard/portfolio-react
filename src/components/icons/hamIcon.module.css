@@ -1,0 +1,32 @@
+
+.animate .svgHamIcon {
+    transform: translate(-5px, 10px) scale(1.2);
+    
+}
+
+.animate .pencil {
+    transform: rotate(405deg) translate(2px,10px);
+    transform-origin: right;
+    
+}
+
+.animate .barTop {
+    transform: translateX(-100%);
+    opacity: 0%;
+}
+
+.animate .barBottom {
+    transform: rotate(-45deg) translateX(-20px) translateY(-15px);
+}
+
+.svgHamIcon * {
+    transition: all 0.5s ease-in-out;
+    
+}
+
+@media (prefers-reduced-motion) {
+    .svgHamIcon * {
+        transition: none;
+        
+    }
+}

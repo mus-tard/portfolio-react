@@ -1,0 +1,51 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    transform: scale(1.4);
+}
+
+.bar { 
+    width: 45.85px;
+    height: 8px;
+    background: #4F5AD0;
+    border-radius: 4px;
+}
+
+
+
+.pencil {
+    display: flex;
+    gap: 4px;
+    justify-content: center;
+    align-items: center;
+    width: 45.85px;
+}
+
+ .eraser, .rectangle, .lead {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eraser {
+    width: 100%;
+    height: 100%;
+}
+
+.rectangle {
+    width: 100%;
+    height: 8px;
+    background: #4F5AD0;
+}
+
+.lead {
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+

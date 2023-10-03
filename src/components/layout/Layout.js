@@ -1,9 +1,12 @@
 import * as React from 'react'
+import {
+    container
+} from './layout.module.css'
 import Nav from '../blocks/Nav'
 
-const Layout = ({ children }) => {
+function Layout({ children }) {
     return (
-        <div>
+        <div className={container}>
             <Nav />
             <main>
                 {children}
