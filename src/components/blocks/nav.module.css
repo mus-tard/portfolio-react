@@ -19,6 +19,11 @@
     transition: padding 0.3s ease-in-out 0.3s, visibility 0s, opacity 0.3s ease-in-out, height 0.3s ease-in-out 0.3s;
 }
 
+.mobileVisible .active {
+    background-color: var(--Primary);
+    color: white;
+}
+
 .mobileVisible {
     height: 50px;
     visibility: visible;
@@ -48,3 +53,54 @@
     font-weight: 600;
 }
 
+@media only screen and (min-width: 700px) {
+    
+    .mobileVisible, .navMenu {
+        transition: none;
+    }
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .ham {
+        display:none;
+        height: 0;
+    }
+
+    .navMenu {
+        visibility: visible;
+        height: unset;
+        opacity: 100;
+        display: flex;
+        gap: 32px;
+    }
+
+    .mobileVisible .active {
+        background: none;
+        color: unset;
+        height: unset;
+        padding: unset;
+    }
+
+    .navMenu a {
+        background: none;
+        border: none;
+        padding: 4px;
+        font-weight: 400;
+        font-size: 27px;
+        border-radius: 0;
+        color: var(--black);
+    }
+
+    .navMenu a:hover{
+        color: var(--Primary);
+    }
+
+    .navMenu .active {
+        border-bottom: var(--Primary) 4px solid;
+        padding-bottom: 0;
+        color: var(--Primary);
+    }
+}

@@ -5,7 +5,10 @@ import Hambutton from '../buttons/HamButton'
 
 import 
     {   
+        ham,
+        active,
         navMenu,
+        container,
         logoAndHam,
         logoContainer,
         mobileVisible,
@@ -51,6 +54,10 @@ function Nav() {
         setIsOpen(!isOpen);
     }
 
+    function handleDelayedClick() {
+      setTimeout(() => {setIsOpen(!isOpen)},500)
+    }
+
     const data = useStaticQuery(graphql`
     query {
       cloudinaryMedia(folder: {eq: "gatsby-cloudinary/logo"}) {
@@ -66,22 +73,34 @@ function Nav() {
     const image = getImage(data.cloudinaryMedia);
     const altText = data.cloudinaryMedia.context.custom.alt
   return (
-    <nav>
+    <nav className={container}>
         <div className={logoAndHam}>
             <div className={logoContainer}>
                 <GatsbyImage image={image} alt={altText}/>
             </div>
-            <div>
+            <div className={ham}>
                 <Hambutton
                     isOpen={isOpen}
                     handleClick = {handleClick}
                 />
             </div>
         </div>
-        <div className={`${navMenu} ${isOpen && mobileVisible}`}>
-            <Link to="/about" onClick={handleClick}>About</Link>
-            <Link to="/resume" onClick={handleClick}>Resume</Link>
-            <Link to="/contact" onClick={handleClick}>Contact</Link>
+        <div className={`${navMenu} ${isOpen && window.innerWidth < 700 && mobileVisible}`}>
+            <Link 
+              to="/about" 
+              onClick={handleDelayedClick}
+              activeClassName={active}
+            > About</Link>
+            <Link 
+              to="/resume" 
+              onClick={handleDelayedClick}
+              activeClassName={active}
+            >Resume</Link>
+            <Link 
+              to="/contact" 
+              onClick={handleDelayedClick}
+              activeClassName={active}
+            >Contact</Link>
         </div>
     </nav>
     
