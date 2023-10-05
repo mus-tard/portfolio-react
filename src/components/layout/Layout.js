@@ -14,7 +14,7 @@ function Layout({ children }) {
     return (
         <div className={container}>
             <Nav />
-            {children.props.location.pathname != "/" && 
+            {children.props.location.pathname !== "/" && 
                 <Link
                     to="/"
                     className={link}

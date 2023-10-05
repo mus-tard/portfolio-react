@@ -5,9 +5,7 @@ import Hambutton from '../buttons/HamButton'
 
 import 
     {   
-        ham,
         navMenu,
-        container,
         logoAndHam,
         logoContainer,
         mobileVisible,
@@ -68,12 +66,12 @@ function Nav() {
     const image = getImage(data.cloudinaryMedia);
     const altText = data.cloudinaryMedia.context.custom.alt
   return (
-    <nav className={container}>
+    <nav>
         <div className={logoAndHam}>
             <div className={logoContainer}>
                 <GatsbyImage image={image} alt={altText}/>
             </div>
-            <div className={ham}>
+            <div>
                 <Hambutton
                     isOpen={isOpen}
                     handleClick = {handleClick}
