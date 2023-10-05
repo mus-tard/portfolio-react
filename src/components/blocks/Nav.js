@@ -81,9 +81,9 @@ function Nav() {
             </div>
         </div>
         <div className={`${navMenu} ${isOpen && mobileVisible}`}>
-            <Link to="/about">About</Link>
-            <Link to="/resume">Resume</Link>
-            <Link to="/contact">Contact</Link>
+            <Link to="/about" onClick={handleClick}>About</Link>
+            <Link to="/resume" onClick={handleClick}>Resume</Link>
+            <Link to="/contact" onClick={handleClick}>Contact</Link>
         </div>
     </nav>
     

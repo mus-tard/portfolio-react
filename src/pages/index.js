@@ -6,18 +6,17 @@ import Button from "../components/buttons/Button"
 
 
 const IndexPage = () => {
+
   return (
-    <Layout>
-      
+    <>
       <Button
         type="cta"
         label="Learn about the story of increased productivity"
       />
-        <Button
-        type="back"
-        label="BACK"
-      />
-    </Layout>
+
+    </>
+      
+
   )
 }
 

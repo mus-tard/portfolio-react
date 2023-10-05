@@ -1,3 +1,7 @@
 .container {
     padding: 48px 16px;
 }
+
+.link {
+    text-decoration: none;
+}
