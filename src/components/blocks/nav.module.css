@@ -96,11 +96,19 @@
 
     .navMenu a:hover{
         color: var(--Primary);
+        font-weight: 600;
     }
 
     .navMenu .active {
         border-bottom: var(--Primary) 4px solid;
         padding-bottom: 0;
         color: var(--Primary);
+        
+    }
+
+    .navMenu .active:hover {
+        color: var(--Primary);
+        font-weight: 400;
+        cursor: default;
     }
 }

@@ -75,9 +75,9 @@ function Nav() {
   return (
     <nav className={container}>
         <div className={logoAndHam}>
-            <div className={logoContainer}>
+            <Link to="/" className={logoContainer}>
                 <GatsbyImage image={image} alt={altText}/>
-            </div>
+            </Link>
             <div className={ham}>
                 <Hambutton
                     isOpen={isOpen}
