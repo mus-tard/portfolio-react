@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from "gatsby"
 import Hambutton from '../buttons/HamButton'
+import Pencil from '../icons/Pencil'
 
 
 import 
@@ -10,8 +11,10 @@ import
         navMenu,
         container,
         logoAndHam,
+        linkContainer,
         logoContainer,
         mobileVisible,
+        pencilContainer
     } from './nav.module.css'
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
@@ -86,21 +89,44 @@ function Nav() {
             </div>
         </div>
         <div className={`${navMenu} ${isOpen && window.innerWidth < 700 && mobileVisible}`}>
-            <Link 
-              to="/about" 
-              onClick={handleDelayedClick}
-              activeClassName={active}
-            > About</Link>
-            <Link 
-              to="/resume" 
-              onClick={handleDelayedClick}
-              activeClassName={active}
-            >Resume</Link>
-            <Link 
-              to="/contact" 
-              onClick={handleDelayedClick}
-              activeClassName={active}
-            >Contact</Link>
+            <div className={linkContainer}>
+              <Link 
+                to="/about" 
+                onClick={handleDelayedClick}
+                activeClassName={active}
+              >
+                About
+                <div className={pencilContainer}>
+                  <Pencil />
+                </div>
+              </Link>
+            </div>
+            <div className={linkContainer}>
+              <Link 
+                to="/resume" 
+                onClick={handleDelayedClick}
+                activeClassName={active}
+              >
+                Resume
+                <div className={pencilContainer}>
+                  <Pencil />
+                </div>
+              </Link>
+
+            </div>
+            <div className={linkContainer}>
+              <Link 
+                to="/contact" 
+                onClick={handleDelayedClick}
+                activeClassName={active}
+              >
+                Contact
+                <div className={pencilContainer}>
+                  <Pencil />
+                </div>
+              </Link>
+
+            </div>
         </div>
     </nav>
     

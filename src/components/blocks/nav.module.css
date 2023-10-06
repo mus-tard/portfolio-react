@@ -1,3 +1,6 @@
+.container {
+    grid-column: 1 / span 4;
+}
 
 
 .logoAndHam {
@@ -53,7 +56,32 @@
     font-weight: 600;
 }
 
+.linkContainer {
+    display: flex;
+    justify-content: center;
+    flex: 1;
+}
+
+.linkContainer a {
+    display: flex;
+    flex-direction: column;
+}
+
+.pencilContainer  {
+    display:none;
+
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        grid-column: 1 / span 8;
+    }
+}
+
+
 @media only screen and (min-width: 700px) {
+    
+
     
     .mobileVisible, .navMenu {
         transition: none;
@@ -75,16 +103,17 @@
         opacity: 100;
         display: flex;
         gap: 32px;
+        justify-content: flex-end;
     }
 
-    .mobileVisible .active {
+    .mobileVisible .active  {
         background: none;
         color: unset;
         height: unset;
         padding: unset;
     }
 
-    .navMenu a {
+    .navMenu .linkContainer a{
         background: none;
         border: none;
         padding: 4px;
@@ -99,16 +128,41 @@
         font-weight: 600;
     }
 
-    .navMenu .active {
-        border-bottom: var(--Primary) 4px solid;
-        padding-bottom: 0;
+    .navMenu .linkContainer .active {
         color: var(--Primary);
-        
+        font-weight: 600;
+        display:flex;
+        flex-direction: column;
     }
+
+    .navMenu .active .pencilContainer {
+        opacity: 100;
+        transition: opacity 0.3s ease-in-out,
+    }
+        
+    
 
     .navMenu .active:hover {
         color: var(--Primary);
-        font-weight: 400;
         cursor: default;
+    }
+
+    .linkContainer {
+        flex: 0 120px;
+    }
+
+    .pencilContainer  {
+        display:flex;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out,
+
+    }
+
+
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        grid-column: 1 / span 12;
     }
 }

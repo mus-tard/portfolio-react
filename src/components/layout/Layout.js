@@ -12,23 +12,26 @@ function Layout({ children }) {
     console.log(children.props)
 
     return (
-        <div className={container}>
-            <Nav />
-            {children.props.location.pathname !== "/" && 
-                <Link
-                    to="/"
-                    className={link}
-                >
-                    <Button
-                        type="back"
-                        label="Home"
-                    />
-                </Link>
-            }
-            <main>
+        <>
+            <header className={container}>
+                <Nav />
+            </header>
+            <main className={container}>
+                {children.props.location.pathname !== "/" && 
+                    <Link
+                        to="/"
+                        className={link}
+                    >
+                        <Button
+                            type="back"
+                            label="Home"
+                        />
+                    </Link>
+                }
                 {children}
             </main>
-        </div>
+        </>
+        
     )
 }
 
