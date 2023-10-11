@@ -1,6 +1,22 @@
+/* Layout Grid - Start */
+
 .container {
     grid-column: 1 / span 4;
 }
+
+@media only screen and (min-width: 600px) {
+    .container {
+        grid-column: 1 / span 8;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+        grid-column: 2 / span 10;
+    }
+}
+
+/* Layout Grid - End */
 
 
 .logoAndHam {
@@ -71,13 +87,6 @@
     display:none;
 
 }
-
-@media only screen and (min-width: 600px) {
-    .container {
-        grid-column: 1 / span 8;
-    }
-}
-
 
 @media only screen and (min-width: 700px) {
     
@@ -161,8 +170,3 @@
 
 }
 
-@media screen and (min-width: 1240px) {
-    .container {
-        grid-column: 1 / span 12;
-    }
-}

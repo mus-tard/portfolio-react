@@ -32,23 +32,21 @@ function debounce(fn, ms) {
 
 function Nav() {
 
-    
-
-    const [isOpen, setIsOpen] = React.useState(false)
+  const [isOpen, setIsOpen] = React.useState(false)
 
 
-    React.useEffect(()=> {
-        const debouncedHandleResize = debounce(
-        function handleResize() {
-            setIsOpen(false)
-        }, 100)
+  React.useEffect(()=> {
+      const debouncedHandleResize = debounce(
+      function handleResize() {
+          setIsOpen(false)
+      }, 100)
 
-        window.addEventListener('resize', debouncedHandleResize)
-        
-        return _ => {
-            window.removeEventListener('resize', debouncedHandleResize) 
-        }
-        
+      window.addEventListener('resize', debouncedHandleResize)
+      
+      return _ => {
+          window.removeEventListener('resize', debouncedHandleResize) 
+      }
+      
     },[])
 
    

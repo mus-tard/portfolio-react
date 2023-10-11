@@ -1,5 +1,5 @@
 import * as React from "react"
-import Button from "../components/buttons/Button"
+import Hero from "../components/blocks/Hero"
 
 
 
@@ -7,11 +7,8 @@ const IndexPage = () => {
 
   return (
     <>
-      <Button
-        type="cta"
-        label="Learn about the story of increased productivity"
-      />
-
+      <Hero />
+      
     </>
       
 
@@ -20,4 +17,4 @@ const IndexPage = () => {
 
 export default IndexPage
 
-export const Head = () => <title>Home Page</title>
+export const Head = () => <title>Kev's Portfolio</title>

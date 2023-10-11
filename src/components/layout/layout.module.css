@@ -6,25 +6,6 @@
     padding: 48px 0;
 }
 
-
-.link {
-    grid-column: 1 / span 4;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 600px) {
-    .link {
-        grid-column: 1 / span 8;
-    }
-}
-
-@media screen and (min-width: 1240px) {
-    .link {
-        grid-column: 5 / span 12;
-    }
-}
-
-
 @media screen and (min-width: 600px) {
     .container {
         margin: 0 16px;
@@ -44,5 +25,23 @@
         column-gap: 20px;
         padding: 48px 0;
     }
+    
 
+}
+
+.link {
+    grid-column: 1 / span 4;
+    text-decoration: none;
+}
+
+@media screen and (min-width: 600px) {
+    .link {
+        grid-column: 1 / span 8;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .link {
+        grid-column: 5 / span 12;
+    }
 }

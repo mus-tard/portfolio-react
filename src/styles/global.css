@@ -3,9 +3,15 @@
     --Dark-Grey: #3A3A42;
     --white: #EFF1FE;
     --black: #1A1A30;
+
+    font-family: "Fira Sans", sans-serif;
 }
 
 svg {
     overflow: visible;
 }
 
+h1 {
+    font-weight: 300;
+    font-size: 47px;
+}
