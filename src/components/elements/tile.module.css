@@ -62,17 +62,11 @@
         background-color: var(--Light);
     }
     
-    .container:active{
-        scale: 0.99;
-    }
     
     .container:hover .decoration {
         background-color: var(--Dark);
     }
     
-    .container:active .decoration {
-        background-color: var(--Secondary);
-    }
 }
 
 
