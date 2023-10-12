@@ -15,6 +15,7 @@ function PortfolioTiles() {
                 <Tile />
                 <Tile />
                 <Tile />
+                <Tile />
             </div>
         </div>
     )
