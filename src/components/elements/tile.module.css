@@ -55,22 +55,26 @@
     align-items: center;
 }
 
-.container:hover{
-    scale: 1.02;
-    background-color: var(--Light);
+@media (hover: hover) {
+
+    .container:hover{
+        scale: 1.02;
+        background-color: var(--Light);
+    }
+    
+    .container:active{
+        scale: 0.99;
+    }
+    
+    .container:hover .decoration {
+        background-color: var(--Dark);
+    }
+    
+    .container:active .decoration {
+        background-color: var(--Secondary);
+    }
 }
 
-.container:active{
-    scale: 0.99;
-}
-
-.container:hover .decoration {
-    background-color: var(--Dark);
-}
-
-.container:active .decoration {
-    background-color: var(--Secondary);
-}
 
 
 
