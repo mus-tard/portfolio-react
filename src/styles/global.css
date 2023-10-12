@@ -1,8 +1,11 @@
 :root {
     --Primary: #4F5AD0;
+    --Secondary: #838CED;
     --Dark-Grey: #3A3A42;
     --white: #EFF1FE;
     --black: #1A1A30;
+    --Light: #DEE1FF;
+    --Dark: #060A47;
 
     font-family: "Fira Sans", sans-serif;
 }
@@ -14,4 +17,21 @@ svg {
 h1 {
     font-weight: 300;
     font-size: 47px;
+}
+
+h2 {
+    font-size: 27px;
+    font-weight: 300;
+    padding: 16px 0 8px;
+}
+
+@media only screen and (min-width: 1240px) {
+    h1 {
+        font-weight: 300;
+        font-size: 63px;
+    }
+    h2 {
+        font-size: 36px;
+        padding: 32px 0 16px;
+    }
 }

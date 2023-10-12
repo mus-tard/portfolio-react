@@ -1,5 +1,6 @@
 import * as React from "react"
 import Hero from "../components/blocks/Hero"
+import PortfolioTiles from "../components/blocks/PortfolioTiles"
 
 
 
@@ -8,7 +9,7 @@ const IndexPage = () => {
   return (
     <>
       <Hero />
-      
+      <PortfolioTiles />
     </>
       
 
