@@ -21,7 +21,6 @@
 }
 
 .imgContainer { 
-    padding: 8px;
     flex: 0 1 160px;
 
     align-self: center;
@@ -75,8 +74,8 @@
 
     }
     .imgContainer {
-        padding: 16px 32px 0;
-        flex: 0 1 0px;
+        /* width: 100%;
+        flex: 0 1 0px; */
     }
 
     .textColumn {
@@ -93,8 +92,8 @@
 
 @media screen and (min-width: 1240px) {
     .imgContainer {
-        padding: 32px 64px 0;
-        flex: 0 1 0px;
+        /* padding: 32px 64px 0;
+        flex: 0 1 0px; */
     }
 
     .textContainer {
