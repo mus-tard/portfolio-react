@@ -4,16 +4,8 @@
     background-color: var(--white);
     display: flex;
     border-radius: 9px;
-    /* box-shadow: 5px 5px 10px 4px rgba(26, 26, 48, 0.40); */
-    /* background: linear-gradient(to bottom right, var(--white), #ffffff00, var(--Light), #ffffff00, var(--Light), #ffffff00, var(--white)); */
 }   
 
-
-.decoration {
-    /* background-color: var(--Primary); */
-    border-radius: 9px 0 0 9px;
-    flex: 0 0 20px;
-}
 
 .content {
     display: flex;
@@ -74,8 +66,7 @@
 
     }
     .imgContainer {
-        /* width: 100%;
-        flex: 0 1 0px; */
+        flex: 1;
     }
 
     .textColumn {
@@ -91,10 +82,6 @@
 }
 
 @media screen and (min-width: 1240px) {
-    .imgContainer {
-        /* padding: 32px 64px 0;
-        flex: 0 1 0px; */
-    }
 
     .textContainer {
         font-size: 36px;

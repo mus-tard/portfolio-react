@@ -2,7 +2,8 @@ import React from 'react'
 import Tile from '../elements/Tile'
 import {
     tileGrid,
-    container
+    container,
+    tileContainer
 } from './portfolioTiles.module.css'
 
 function PortfolioTiles() {
@@ -12,8 +13,16 @@ function PortfolioTiles() {
                 Case Studies
             </h2>
             <div className={tileGrid}>
-                <Tile />
-                <Tile />
+                <div className={tileContainer}>
+                    <Tile />
+                </div>
+                <div className={tileContainer}>
+                    <Tile />
+                </div>
+
+               
+
+                
             </div>
         </div>
     )
