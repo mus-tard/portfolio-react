@@ -6,14 +6,29 @@ require("dotenv").config({
   path: `.env`,
 })
 
+
 module.exports = {
+  flags: {
+    PARTIAL_HYDRATION: true
+  },
   siteMetadata: {
     siteUrl: `https://www.yourdomain.tld`,
   },
+  graphqlTypegen: true,
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    {
+      resolve: 'gatsby-source-storyblok',
+      options: {
+        accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
+        version: 'draft',
+        region: "us",
+
+      },
+      
+    },
     {
       resolve: 'gatsby-source-cloudinary',
       options: {

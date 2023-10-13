@@ -21,6 +21,7 @@
     "gatsby-plugin-image": "^3.12.0",
     "gatsby-source-cloudinary": "^0.5.1",
     "gatsby-source-filesystem": "^5.12.0",
+    "gatsby-source-storyblok": "^6.2.6",
     "gatsby-transformer-cloudinary": "^4.5.0",
     "gatsby-transformer-sharp": "^5.12.0",
     "react": "^18.2.0",
