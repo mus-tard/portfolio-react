@@ -14,7 +14,6 @@ function PortfolioTiles() {
             <div className={tileGrid}>
                 <Tile />
                 <Tile />
-                <Tile />
             </div>
         </div>
     )

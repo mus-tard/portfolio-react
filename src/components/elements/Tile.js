@@ -1,16 +1,13 @@
 import React from 'react'
-import ArrowIcon from '../icons/ArrowIcon'
 import { useStaticQuery, graphql } from 'gatsby';
 import { GatsbyImage, getImage } from 'gatsby-plugin-image';
 import { 
 
     content,
     container,
-    decoration,
     textColumn,
     imgContainer,
     textContainer,
-    arrowContainer
 
 } from './tile.module.css'
 
