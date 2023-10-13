@@ -33,7 +33,6 @@ function Tile() {
 
     return (
         <div className={container}>
-            <div className={decoration}></div>
             <div className={content}>
                 
                 <div className={imgContainer}> 
@@ -43,12 +42,12 @@ function Tile() {
                     <div className={textContainer}>
                         Process Design
                     </div>
-                    <div className={arrowContainer}>
+                    {/* <div className={arrowContainer}>
                         <ArrowIcon
                             width='30px'
 
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
         </div>

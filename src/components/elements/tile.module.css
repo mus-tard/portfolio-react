@@ -1,15 +1,16 @@
 
 
 .container {
-    background-color: var(--Light);
+    background-color: var(--white);
     display: flex;
     border-radius: 9px;
-    box-shadow: 5px 5px 10px 4px rgba(26, 26, 48, 0.40);
-}
+    /* box-shadow: 5px 5px 10px 4px rgba(26, 26, 48, 0.40); */
+    /* background: linear-gradient(to bottom right, var(--white), #ffffff00, var(--Light), #ffffff00, var(--Light), #ffffff00, var(--white)); */
+}   
 
 
 .decoration {
-    background-color: var(--Primary);
+    /* background-color: var(--Primary); */
     border-radius: 9px 0 0 9px;
     flex: 0 0 20px;
 }
@@ -31,7 +32,6 @@
     font-size: 27px;
     display: flex;
     justify-content: center;
-    align-items: center;
     padding: 8px;
     flex-direction: column;
     flex-grow: 1;
@@ -51,7 +51,6 @@
     margin-top: 24px;
     display: flex;
     flex-grow: 1;
-    justify-content: center;
     align-items: center;
 }
 
@@ -59,13 +58,9 @@
 
     .container:hover{
         scale: 1.02;
-        background-color: var(--Light);
     }
     
-    
-    .container:hover .decoration {
-        background-color: var(--Dark);
-    }
+
     
 }
 
@@ -73,7 +68,7 @@
 
 
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
 
     .content {
         flex-direction: column;
@@ -82,6 +77,10 @@
     .imgContainer {
         padding: 16px 32px 0;
         flex: 0 1 0px;
+    }
+
+    .textColumn {
+        align-items: center;
     }
 
     .textContainer {

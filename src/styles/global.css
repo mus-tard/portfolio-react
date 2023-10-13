@@ -2,12 +2,14 @@
     --Primary: #4F5AD0;
     --Secondary: #838CED;
     --Dark-Grey: #3A3A42;
+    --Light-Grey: #7D7D91;
     --white: #EFF1FE;
     --black: #1A1A30;
     --Light: #DEE1FF;
     --Dark: #060A47;
 
     font-family: "Fira Sans", sans-serif;
+    background-color: var(--white);
 }
 
 svg {

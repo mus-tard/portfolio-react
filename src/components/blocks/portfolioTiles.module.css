@@ -18,31 +18,53 @@
 
 /* Layout Grid - End */
 
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
 .tileGrid{
     display: flex;
     flex-direction: column;
-    gap: 32px;
+    gap: 8px;
+    border-radius: 9px;
 }
 
-@media only screen and (min-width: 800px) {
+@media only screen and (min-width: 600px) {
     .tileGrid {
         flex-direction: row;
-        gap: 32px;
+        gap: 8px;
         flex-wrap: wrap;
         justify-content: center;
         align-items: center;
        
     }
     .tileGrid > * {
-        flex: 0 1 250px;
+        flex: 0 1 300px;
     } 
 }
 
 @media only screen and (min-width: 1240px) {
     .tileGrid {
-        gap: 64px;
+        gap: 16px;
     }
     .tileGrid > * {
+        flex: 0 1 350px;
+    } 
+}
+
+@media only screen and (min-width: 1600px) {
+    .tileGrid > * {
         flex: 0 1 400px;
+    } 
+}
+
+@media only screen and (min-width: 1900px) {
+    .tileGrid > * {
+        flex: 0 1 500px;
     } 
 }
