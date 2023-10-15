@@ -16,15 +16,17 @@
   },
   "dependencies": {
     "@fontsource/fira-sans": "^5.0.13",
+    "crypto-browserify": "^3.12.0",
     "dotenv": "^16.3.1",
     "gatsby": "^5.12.4",
     "gatsby-plugin-image": "^3.12.0",
+    "gatsby-plugin-sharp": "^5.12.1",
     "gatsby-source-cloudinary": "^0.5.1",
     "gatsby-source-filesystem": "^5.12.0",
     "gatsby-source-storyblok": "^6.2.6",
     "gatsby-transformer-cloudinary": "^4.5.0",
     "gatsby-transformer-sharp": "^5.12.0",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react": "0.0.0-experimental-09fbee89d-20231013",
+    "react-dom": "0.0.0-experimental-09fbee89d-20231013"
   }
 }

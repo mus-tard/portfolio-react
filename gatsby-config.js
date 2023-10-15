@@ -25,7 +25,7 @@ module.exports = {
         accessToken: process.env.GATSBY_STORYBLOK_ACCESS_TOKEN,
         version: 'draft',
         region: "us",
-
+        localAssets: true,
       },
       
     },
