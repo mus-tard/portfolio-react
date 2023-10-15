@@ -19,8 +19,6 @@ function PortfolioTiles() {
                 <div className={tileContainer}>
                     <Tile />
                 </div>
-           
-
 
                
 

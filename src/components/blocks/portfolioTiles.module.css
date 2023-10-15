@@ -46,7 +46,7 @@
        
     }
     .tileGrid > * {
-        flex: 1 1 200px;
+        flex: 1 1 300px;
     } 
 
     .tileContainer {
