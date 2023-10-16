@@ -1,4 +1,5 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 import Tile from '../elements/Tile'
 import {
     tileGrid,
@@ -6,26 +7,42 @@ import {
     tileContainer
 } from './portfolioTiles.module.css'
 
+
+
 function PortfolioTiles() {
+    const data = useStaticQuery(graphql`
+    query {
+        allFile(filter: {sourceInstanceName: {eq: "portfolio"}}) {
+            nodes {
+                name
+            }
+        }
+    }
+`
+)
     return(
         <div className={container}>
             <h2>
                 Case Studies
             </h2>
             <div className={tileGrid}>
-                <div className={tileContainer}>
-                    <Tile />
-                </div>
-                <div className={tileContainer}>
-                    <Tile />
-                </div>
-
-               
+                {
+                    data.allFile.nodes.map(node => (
+                        <div className={tileContainer} key={node.name}>
+                            <Tile
+                                label = {node.name}
+                            />
+                        </div>
+                    ))
+                }
+                              
 
                 
             </div>
         </div>
     )
 }
+
+
 
 export default PortfolioTiles

@@ -35,6 +35,13 @@ module.exports = {
       },
     },
     {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'portfolio',
+        path: `${__dirname}/portfolio`,
+      },
+    },
+    {
       resolve: 'gatsby-transformer-cloudinary',
       options: {
         cloudName: process.env.CLOUDINARY_CLOUD_NAME,

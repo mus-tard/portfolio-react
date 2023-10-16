@@ -11,7 +11,7 @@ import {
 
 } from './tile.module.css'
 
-function Tile() {
+function Tile({ label }) {
 
     const data = useStaticQuery(graphql`
     query {
@@ -33,18 +33,12 @@ function Tile() {
             <div className={content}>
                 
                 <div className={imgContainer}> 
-                <GatsbyImage image={image} alt={altText}/>
+                    <GatsbyImage image={image} alt={altText}/>
                 </div>
                 <div className={textColumn}>
                     <div className={textContainer}>
-                        Process Design
+                        {label}
                     </div>
-                    {/* <div className={arrowContainer}>
-                        <ArrowIcon
-                            width='30px'
-
-                        />
-                    </div> */}
                 </div>
             </div>
         </div>
