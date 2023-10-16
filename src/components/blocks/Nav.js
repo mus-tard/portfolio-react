@@ -1,4 +1,3 @@
-"use client"
 import React from 'react'
 import { Link } from "gatsby"
 import Hambutton from '../buttons/HamButton'
