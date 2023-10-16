@@ -1,5 +1,10 @@
 import React from 'react'
-import { useStaticQuery, graphql } from 'gatsby'
+import { 
+    Link,
+    graphql,
+    useStaticQuery,
+} from 'gatsby'
+
 import Tile from '../elements/Tile'
 import {
     tileGrid,
@@ -21,6 +26,7 @@ function PortfolioTiles() {
             }
             frontmatter {
               title
+              slug
             }
             id
           }
@@ -36,11 +42,13 @@ function PortfolioTiles() {
             <div className={tileGrid}>
                 {
                     data.allMdx.nodes.map(node => (
-                        <div className={tileContainer} key={node.id}>
-                            <Tile
-                                label = {node.frontmatter.title}
-                            />
-                        </div>
+                        <Link to={`/portfolio/${node.frontmatter.slug}`}>
+                            <div className={tileContainer} key={node.id}>
+                                <Tile
+                                    label = {node.frontmatter.title}
+                                />
+                             </div>
+                        </Link>
                     ))
                 }
                               

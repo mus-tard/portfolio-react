@@ -43,6 +43,12 @@
     display: flex;
     flex-grow: 1;
     align-items: center;
+    text-decoration: none;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black)
 }
 
 @media (hover: hover) {
