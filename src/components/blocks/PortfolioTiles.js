@@ -12,12 +12,20 @@ import {
 function PortfolioTiles() {
     const data = useStaticQuery(graphql`
     query {
-        allFile(filter: {sourceInstanceName: {eq: "portfolio"}}) {
-            nodes {
-                name
+        allMdx(sort: {frontmatter: {priority: DESC}}) {
+          nodes {
+            parent {
+              ... on File {
+                modifiedTime(formatString: "MMMM D, YYYY")
+              }
             }
+            frontmatter {
+              title
+            }
+            id
+          }
         }
-    }
+      }
 `
 )
     return(
@@ -27,10 +35,10 @@ function PortfolioTiles() {
             </h2>
             <div className={tileGrid}>
                 {
-                    data.allFile.nodes.map(node => (
-                        <div className={tileContainer} key={node.name}>
+                    data.allMdx.nodes.map(node => (
+                        <div className={tileContainer} key={node.id}>
                             <Tile
-                                label = {node.name}
+                                label = {node.frontmatter.title}
                             />
                         </div>
                     ))

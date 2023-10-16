@@ -41,6 +41,7 @@ module.exports = {
         path: `${__dirname}/portfolio`,
       },
     },
+    `gatsby-plugin-mdx`,
     {
       resolve: 'gatsby-transformer-cloudinary',
       options: {

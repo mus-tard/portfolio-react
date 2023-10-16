@@ -29,7 +29,7 @@ function Tile({ label }) {
   const altText = data.cloudinaryMedia.context.custom.alt
 
     return (
-        <div className={container}>
+        <article className={container}>
             <div className={content}>
                 
                 <div className={imgContainer}> 
@@ -41,7 +41,7 @@ function Tile({ label }) {
                     </div>
                 </div>
             </div>
-        </div>
+        </article>
     )
 }
 
