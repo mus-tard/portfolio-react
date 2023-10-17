@@ -14,6 +14,23 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-mdx`,
+
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'images',
+        path: `${__dirname}/src/images`,
+      },
+    },
+
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'portfolio',
+        path: `${__dirname}/portfolio`,
+      },
+    },
 
     {
       resolve: 'gatsby-source-cloudinary',
@@ -27,21 +44,7 @@ module.exports = {
         prefix: 'gatsby-cloudinary/'
       }
     },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'portfolio',
-        path: `${__dirname}/portfolio`,
-      },
-    },
-    `gatsby-plugin-mdx`,
+
     {
       resolve: 'gatsby-transformer-cloudinary',
       options: {
@@ -51,9 +54,10 @@ module.exports = {
 
         // This folder will be created if it doesn’t exist.
         uploadFolder: 'gatsby-cloudinary',
-        transformTypes: [`CloudinaryMedia`]
+        transformTypes: [`CloudinaryMedia`, 'CloudinaryAsset']
 
+      },
     },
-    },
+    
   ],
 }

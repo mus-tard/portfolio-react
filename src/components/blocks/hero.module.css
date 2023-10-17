@@ -34,6 +34,8 @@
     grid-column: 1 / span 4;
 }
 
+
+
 @media only screen and (min-width: 600px) {
     .container {
         display: grid;
@@ -72,7 +74,7 @@
 
 /* Hero Grid - End */
 
-h1 {
+.textContainer h1 {
     text-align: center;
 }
 
@@ -85,7 +87,7 @@ h1 {
 }
 
 @media only screen and (min-width: 600px) {
-    h1, .subtitle {
+    .textContainer h1, .subtitle {
         text-align: start;
     }
 

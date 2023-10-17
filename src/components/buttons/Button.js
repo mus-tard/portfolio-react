@@ -12,7 +12,7 @@ import
     } from "./button.module.css"
 
 
-function ButtonCta({label, type}) {
+function Button({label, type}) {
 
 
     return (
@@ -32,4 +32,4 @@ function ButtonCta({label, type}) {
     )
 }
 
-export default ButtonCta
+export default Button

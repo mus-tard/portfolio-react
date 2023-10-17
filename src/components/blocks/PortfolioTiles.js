@@ -19,12 +19,19 @@ function PortfolioTiles() {
     query {
         allMdx(sort: {frontmatter: {priority: DESC}}) {
           nodes {
-            parent {
-              ... on File {
-                modifiedTime(formatString: "MMMM D, YYYY")
-              }
-            }
             frontmatter {
+              hero_image {
+                childCloudinaryAsset {
+                  gatsbyImageData(placeholder: BLURRED)
+                  rawCloudinaryData {
+                    context {
+                      custom {
+                        alt
+                      }
+                    }
+                  }
+                }
+              }
               title
               slug
             }
@@ -34,6 +41,8 @@ function PortfolioTiles() {
       }
 `
 )
+
+
     return(
         <div className={container}>
             <h2>
@@ -42,10 +51,12 @@ function PortfolioTiles() {
             <div className={tileGrid}>
                 {
                     data.allMdx.nodes.map(node => (
-                        <Link to={`/portfolio/${node.frontmatter.slug}`}>
-                            <div className={tileContainer} key={node.id}>
+                        <Link to={`/portfolio/${node.frontmatter.slug}`} key={node.id}>
+                            <div className={tileContainer} >
                                 <Tile
                                     label = {node.frontmatter.title}
+                                    img = {node.frontmatter.hero_image.childCloudinaryAsset}
+                                    alt = {node.frontmatter.hero_image.childCloudinaryAsset.rawCloudinaryData.context.custom.alt}
                                 />
                              </div>
                         </Link>

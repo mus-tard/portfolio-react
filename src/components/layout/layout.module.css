@@ -1,32 +1,28 @@
 .container {
-    margin: 0 16px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     column-gap: 16px;
     row-gap: 16px;
-    padding: 48px 0;
+
 }
 
 @media screen and (min-width: 600px) {
     .container {
-        margin: 0 16px;
+
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         column-gap: 16px;
         row-gap: 48px;
-        padding: 48px 0;
     }
 
 }
 
 @media screen and (min-width: 1240px) {
     .container {
-        margin: 0 16px;
         display: grid;
         grid-template-columns: repeat(12, 1fr);
         column-gap: 16px;
-        row-gap: 16px;
-        padding: 48px 0;
+        row-gap: 96px;
         
     }
     

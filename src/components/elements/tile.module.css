@@ -21,6 +21,7 @@
 
 .textColumn {
     font-size: 27px;
+    font-weight: 300;
     display: flex;
     justify-content: center;
     padding: 8px 0;
@@ -39,7 +40,6 @@
 }
 
 .textContainer {
-    margin-top: 24px;
     display: flex;
     flex-grow: 1;
     align-items: center;

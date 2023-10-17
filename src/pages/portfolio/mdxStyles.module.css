@@ -17,3 +17,18 @@
 }
 
 /* Layout Grid - End */
+
+
+.content{
+    padding: 16px 32px;
+}
+.content h2 {
+    margin-top: 32px;
+    background-image: url('./headerPencil.svg');
+    background-repeat: no-repeat;
+}
+
+.content h3 {
+    color: var(--Primary);
+    font-weight: 600;
+}

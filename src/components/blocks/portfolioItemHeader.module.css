@@ -1,0 +1,22 @@
+.container {
+    background-color: var(--Primary);
+    color: var(--white);
+    padding: 16px 8px;
+}
+.headerImgContainer {
+    width: 50%;
+    margin: 0 auto;
+}
+
+.content {
+    padding: 0 16px;
+}
+
+.pgHeader {
+    padding: 16px 0 8px;
+    line-height: 120%;
+}
+
+.pgSummary {
+    line-height: normal;
+}
