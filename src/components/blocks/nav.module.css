@@ -13,6 +13,8 @@
 @media screen and (min-width: 1240px) {
     .container {
         grid-column: 2 / span 10;
+        max-width: 1500px;
+        margin: 0 auto;
     }
 }
 

@@ -19,7 +19,15 @@ function Tile({ label, img, alt }) {
             <div className={content}>
                 
                 <div className={imgContainer}> 
-                    <GatsbyImage image={image} alt={alt}/>
+                    <GatsbyImage 
+                        image={image} 
+                        alt={alt}
+                        style={{ maxHeight:'100%'}}
+                        imgStyle={{ 
+                            maxHeight:'100%',
+                            objectFit: 'contain'
+                        }}
+                    />
                 </div>
                 <div className={textColumn}>
                     <h3 className={textContainer}>

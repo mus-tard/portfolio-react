@@ -25,6 +25,10 @@
 @media only screen and (min-width: 600px) {
     .container {
         grid-column: 1 / span 8;
+        
+    }
+
+    .allContent {
         display: grid;
         grid-template-columns: repeat(8, 1fr);
         justify-items: center;
@@ -44,7 +48,13 @@
 
 @media screen and (min-width: 1240px) {
     .container {
+        grid-column: 1 / span 12;
+       
+    }
 
+    .allContent{
+        max-width: 1200px;
+        margin: 0 auto;
         grid-column: 1 / span 12;
         display: grid;
         grid-template-columns: repeat(12, 1fr);

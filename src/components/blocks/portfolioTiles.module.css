@@ -13,6 +13,8 @@
 @media screen and (min-width: 1240px) {
     .container {
         grid-column: 2 / span 10;
+        max-width: 1200px;
+        margin: 0 auto;
     }
 }
 
@@ -22,7 +24,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    padding: 0 8px;
+    padding: 08px;
 }
 
 
@@ -38,7 +40,7 @@
 @media only screen and (min-width: 600px) {
     .tileGrid {
         flex-direction: row;
-        column-gap: 64px;
+        column-gap: 16px;
         row-gap: 32px;
         flex-wrap: wrap;
         justify-content: flex-start;
@@ -55,8 +57,8 @@
         align-items: center;
     }
 
-    .tileContainer > * {
-        flex: 0 1 300px;
+    .tileContainer  * {
+        /* flex: 0 1 300px; */
     }
 }
 

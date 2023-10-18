@@ -14,8 +14,9 @@
 
 .imgContainer { 
     flex: 0 1 160px;
-
-    align-self: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
 }
 
@@ -63,11 +64,15 @@ a {
 @media only screen and (min-width: 600px) {
 
     .content {
-        flex-direction: column;
+        /* flex-direction: column; */
+        display: block;
 
     }
-    .imgContainer {
-        flex: 1;
+
+    .imgContainer { 
+        flex: 0;
+        height: 300px;
+    
     }
 
     .textColumn {
@@ -75,6 +80,7 @@ a {
     }
 
     .textContainer {
+        align-items: flex-start;
         margin-top: 0px;
         text-align: left;
     }
@@ -86,5 +92,10 @@ a {
 
     .textContainer {
         font-size: 36px;
+    }
+
+    .imgContainer { 
+        height: 400px;
+    
     }
 }
