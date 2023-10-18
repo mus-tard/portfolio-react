@@ -56,3 +56,5 @@ const PortfolioItem = ( {data, children} ) => {
   `
 
   export default PortfolioItem
+
+  export const Head = ({ data }) => <title>{data.mdx.frontmatter.title}</title>

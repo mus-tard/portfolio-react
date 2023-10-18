@@ -29,26 +29,4 @@
 
 }
 
-@media screen and (min-width: 1600px) {
-    .container {
-        max-width: 1600px;
-        margin: 0 auto;
-    }
-}
 
-.link {
-    grid-column: 1 / span 4;
-    text-decoration: none;
-}
-
-@media screen and (min-width: 600px) {
-    .link {
-        grid-column: 1 / span 1;
-    }
-}
-
-@media screen and (min-width: 1240px) {
-    .link {
-        grid-column: 2 / span 1;
-    }
-}

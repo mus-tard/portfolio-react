@@ -7,7 +7,7 @@ function Pencil() {
     return (
         <div className={container}>
             <svg 
-                width="100%" 
+                width="80%" 
                 height="100%" 
                 viewBox="0 0 74 8" 
                 fill="none" 

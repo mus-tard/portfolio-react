@@ -161,10 +161,15 @@
 
     .linkContainer {
         flex: 0 120px;
+        display:flex;
+        align-items: center;
+        justify-content: center;
     }
 
     .pencilContainer  {
         display:flex;
+        align-items: center;
+        justify-content: center;
         opacity: 0;
         transition: opacity 0.3s ease-in-out,
 

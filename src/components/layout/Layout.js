@@ -15,7 +15,7 @@ function Layout({ children }) {
         <>
             <header className={container}>
                 <Nav />
-            </header>
+            </header>          
             <main className={container}>
                 {children}
             </main>

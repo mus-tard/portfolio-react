@@ -2,6 +2,7 @@
     background-color: var(--Primary);
     color: var(--white);
     padding: 16px 8px;
+    grid-column: 2 / span 10;
 }
 .headerImgContainer {
     width: 50%;
@@ -19,4 +20,45 @@
 
 .pgSummary {
     line-height: normal;
+}
+
+@media only screen and (min-width: 600px) {
+    .container {
+        grid-column: 1 / span 8;
+        display: grid;
+        grid-template-columns: repeat(8, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .content {
+        grid-column: 5 / span 4;
+        grid-row: 1;
+    }
+
+    .headerImgContainer {
+        grid-column: 1 / span 4;
+        grid-row: 1;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .container {
+
+        grid-column: 1 / span 12;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        justify-items: center;
+        align-items: center;
+    }
+
+    .content {
+        grid-column: 8 / span 4;
+        grid-row: 1;
+    }
+
+    .headerImgContainer {
+        grid-column: 2 / span 5;
+        grid-row: 1;
+    }
 }

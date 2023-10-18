@@ -16,14 +16,6 @@ function PortfolioItemHeader( {image, alt, title, summary} ) {
     <div className={container}>
         <div className={content}>
             <h1 className={pgHeader}>{title}</h1>
-            {/* <Link
-                to="/"
-                >
-                <Button
-                type="back"
-                label="Back"
-                />
-            </Link> */}
             <p className={pgSummary}>{summary}</p>
         </div>
         <div className={headerImgContainer}>
