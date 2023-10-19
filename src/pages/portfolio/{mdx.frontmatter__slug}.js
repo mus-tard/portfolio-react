@@ -7,7 +7,7 @@ import {
   
  } from './mdxStyles.module.css'
 import { getImage } from 'gatsby-plugin-image';
-import PortfolioItemHeader from '../../components/blocks/PortfolioItemHeader';
+import SubpageHeader from '../../components/blocks/SubpageHeader';
 
 const PortfolioItem = ( {data, children} ) => {
   const image = getImage(data.mdx.frontmatter.hero_image.childCloudinaryAsset);
@@ -17,7 +17,7 @@ const PortfolioItem = ( {data, children} ) => {
 
     return (
       <div className={container}>
-        <PortfolioItemHeader
+        <SubpageHeader
           image={image} 
           alt={alt}
           title={pgTitle}

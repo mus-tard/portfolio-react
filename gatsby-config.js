@@ -31,6 +31,13 @@ module.exports = {
         path: `${__dirname}/portfolio`,
       },
     },
+    {
+      resolve: 'gatsby-source-filesystem',
+      options: {
+        name: 'about',
+        path: `${__dirname}/about`,
+      },
+    },
 
     {
       resolve: 'gatsby-source-cloudinary',

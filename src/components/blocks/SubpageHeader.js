@@ -1,5 +1,4 @@
 import React from 'react'
-// import { Link } from 'gatsby'
 import { GatsbyImage } from 'gatsby-plugin-image'
 import {
     content,
@@ -8,10 +7,10 @@ import {
     container,
     allContent,
     headerImgContainer
- } from './portfolioItemHeader.module.css'
-// import Button from "../buttons/Button"
+ } from './subpageHeader.module.css'
 
-function PortfolioItemHeader( {image, alt, title, summary} ) {
+
+function SubpageHeader( {image, alt, title, summary} ) {
     return (
 
     <div className={container}>
@@ -29,5 +28,5 @@ function PortfolioItemHeader( {image, alt, title, summary} ) {
     )
 }
 
-export default PortfolioItemHeader
+export default SubpageHeader
 

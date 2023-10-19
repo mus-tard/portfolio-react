@@ -17,12 +17,16 @@ import {
 function PortfolioTiles() {
     const data = useStaticQuery(graphql`
     query {
-        allMdx(sort: {frontmatter: {priority: DESC}}) {
-          nodes {
+      allFile(
+        filter: {sourceInstanceName: {eq: "portfolio"}}
+        sort: {childMdx: {frontmatter: {priority: DESC}}}
+      ) {
+        nodes {
+          childMdx {
             frontmatter {
               hero_image {
                 childCloudinaryAsset {
-                  gatsbyImageData(placeholder: BLURRED)
+                  gatsbyImageData
                   rawCloudinaryData {
                     context {
                       custom {
@@ -39,9 +43,15 @@ function PortfolioTiles() {
           }
         }
       }
+    }
 `
 )
 
+const portfolioArray = data.allFile.nodes
+
+const nullFreePortfolioArray = portfolioArray.filter(node => node.childMdx !== null)
+
+console.log(nullFreePortfolioArray)
 
     return(
         <div className={container}>
@@ -50,13 +60,13 @@ function PortfolioTiles() {
             </h2>
             <div className={tileGrid}>
                 {
-                    data.allMdx.nodes.map(node => (
-                        <Link to={`/portfolio/${node.frontmatter.slug}`} key={node.id}>
+                    nullFreePortfolioArray.map(node => (
+                        <Link to={`/portfolio/${node.childMdx.frontmatter.slug}`} key={node.id}>
                             <div className={tileContainer} >
                                 <Tile
-                                    label = {node.frontmatter.title}
-                                    img = {node.frontmatter.hero_image.childCloudinaryAsset}
-                                    alt = {node.frontmatter.hero_image.childCloudinaryAsset.rawCloudinaryData.context.custom.alt}
+                                    label = {node.childMdx.frontmatter.title}
+                                    img = {node.childMdx.frontmatter.hero_image.childCloudinaryAsset}
+                                    alt = {node.childMdx.frontmatter.hero_image.childCloudinaryAsset.rawCloudinaryData.context.custom.alt}
                                 />
                              </div>
                         </Link>

@@ -77,12 +77,13 @@ a {
 
     .textColumn {
         align-items: center;
+        
     }
 
     .textContainer {
         align-items: flex-start;
         margin-top: 0px;
-        text-align: left;
+        text-align: center;
     }
 
 
