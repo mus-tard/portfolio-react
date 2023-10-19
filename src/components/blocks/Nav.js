@@ -89,6 +89,18 @@ function Nav() {
         <div className={`${navMenu} ${isOpen && window.innerWidth < 700 && mobileVisible}`}>
             <div className={linkContainer}>
               <Link 
+                to="/" 
+                onClick={handleDelayedClick}
+                activeClassName={active}
+              >
+                Home
+                <div className={pencilContainer}>
+                  <Pencil />
+                </div>
+              </Link>
+            </div>
+            <div className={linkContainer}>
+              <Link 
                 to="/about" 
                 onClick={handleDelayedClick}
                 activeClassName={active}
@@ -98,23 +110,11 @@ function Nav() {
                   <Pencil />
                 </div>
               </Link>
-            </div>
-            <div className={linkContainer}>
-              <Link 
-                to="/resume" 
-                onClick={handleDelayedClick}
-                activeClassName={active}
-              >
-                Resume
-                <div className={pencilContainer}>
-                  <Pencil />
-                </div>
-              </Link>
 
             </div>
             <div className={linkContainer}>
-              <Link 
-                to="/contact" 
+              <a 
+                href="#contact"
                 onClick={handleDelayedClick}
                 activeClassName={active}
               >
@@ -122,7 +122,7 @@ function Nav() {
                 <div className={pencilContainer}>
                   <Pencil />
                 </div>
-              </Link>
+              </a>
 
             </div>
         </div>

@@ -4,6 +4,7 @@ import {
     container
 } from './layout.module.css'
 import Nav from '../blocks/Nav'
+import Footer from '../blocks/Footer'
 
 
 
@@ -19,6 +20,9 @@ function Layout({ children }) {
             <main className={container}>
                 {children}
             </main>
+            <footer>
+                <Footer />
+            </footer>
         </>
         
     )

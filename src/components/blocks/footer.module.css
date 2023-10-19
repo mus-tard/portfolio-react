@@ -1,0 +1,23 @@
+.container {
+    background-color: var(--Primary);
+    color: var(--white);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 16px;
+    align-items: center;
+    text-align: center;
+    padding: 32px;
+    margin-top: 24px;
+}
+
+.contact {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    font-size: 24px;
+}
+
+aside {
+    margin-top: auto;
+}

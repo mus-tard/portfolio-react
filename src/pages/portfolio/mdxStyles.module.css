@@ -58,8 +58,10 @@
     background-repeat: no-repeat;
 }
 
-.content h3 {
+.content h3, .content a {
     color: var(--Primary);
     font-weight: 600;
 }
+
+
 
