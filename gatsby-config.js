@@ -34,7 +34,12 @@ module.exports = {
         path: `${__dirname}/portfolio`,
       },
     },
-
+    {
+      resolve: 'gatsby-plugin-manifest',
+      options: {
+        "icon": "src/images/icon.png"
+      }
+    },
 
     {
       resolve: 'gatsby-source-cloudinary',
