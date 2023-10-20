@@ -1,7 +1,7 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import AboutContent from '../../about/index.mdx';
+import AboutContent from '../../about';
 import { 
     content,
     container,
