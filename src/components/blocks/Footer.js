@@ -1,8 +1,12 @@
 import React from 'react'
 import ArrowIcon from '../icons/ArrowIcon';
 import { 
+    line,
+    email,
     contact,
-    container
+    container,
+    emailContainer,
+    contactContainer
 } from './footer.module.css'
 
 function Footer() {
@@ -12,17 +16,31 @@ function Footer() {
 
     return (
         <div className={container}>
-            <div className={contact} id="contact">
-        
-                kevin.delahunt@kevd.design
+            <div className={contactContainer}>
+                <div className={contact} >
+                    <h2>
+                        Contact
+                        </h2>
+
+                        For inquiries, please email me at:
+
+                    <div className={emailContainer} id="contact">
+                        <div className={email}>
+                            kevin.delahunt<wbr />@kevd.design
+                        </div>
+                    </div>
+                    
+                </div>
+
+                
             </div>
+            
 
-            <aside>©{year} - Kevin Delahunt</aside>
+            <aside>
+                <div className={line}></div>
+                ©{year} - Kevin Delahunt
+            </aside>
 
-            <ArrowIcon
-                fill="var(--white)"
-                width="50px"
-            />
         </div>
     )
 }
