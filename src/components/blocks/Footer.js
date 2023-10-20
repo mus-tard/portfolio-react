@@ -1,8 +1,10 @@
 import React from 'react'
+import Button from '../buttons/Button'
 import { 
     email,
     contact,
     container,
+    emailContainer,
     contactContainer
 } from './footer.module.css'
 
@@ -10,6 +12,11 @@ function Footer() {
 
     const d = new Date()
     let year = d.getFullYear();
+
+    function handleClick() {
+
+        window.location = 'mailto:kevin.delahunt@kevd.design'
+    }
 
     return (
         <div className={container}>
@@ -21,10 +28,16 @@ function Footer() {
 
                         For inquiries, please email me at:
 
-                    <div id="contact">
+                    <div id="contact" className={emailContainer}>
                         <div className={email}>
-                            kevin.delahunt<wbr />@kevd.design
+                        kevin.delahunt<wbr />@kevd.design 
                         </div>
+                        <Button
+                            label="Open in email app"
+                            type="cta"
+                            onClick={handleClick}
+                            
+                        />
                     </div>
                     
                 </div>
@@ -34,6 +47,7 @@ function Footer() {
             
 
             <aside>
+
                 ©{year} - Kevin Delahunt
             </aside>
 

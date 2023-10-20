@@ -12,12 +12,12 @@ import
     } from "./button.module.css"
 
 
-function Button({label, type}) {
+function Button({label, type, onClick}) {
 
 
     return (
         <div className={container}>
-            <button className={`${type === "cta" ? ctaButton : backButton} ${buttonStyle}`}>
+            <button onClick={onClick} className={`${type === "cta" ? ctaButton : backButton} ${buttonStyle}`}>
                 <div className={buttonText}>
                     {label}
                 </div>
