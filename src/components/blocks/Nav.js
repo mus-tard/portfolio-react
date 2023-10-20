@@ -116,7 +116,6 @@ function Nav() {
               <a 
                 href="#contact"
                 onClick={handleDelayedClick}
-                activeClassName={active}
               >
                 Contact
                 <div className={pencilContainer}>

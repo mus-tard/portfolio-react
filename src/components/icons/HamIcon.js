@@ -9,7 +9,7 @@ import {
 function HamIcon({width, isOpen}) {
 
     return (
-        <div className={isOpen && animate}>
+        <div className={isOpen ? animate : undefined}>
             <svg 
                 width={width||"100%"}
                 height="100%" 

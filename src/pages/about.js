@@ -12,21 +12,19 @@ import SubpageHeader from '../components/blocks/SubpageHeader';
 
 function About({data}) {
 
-    console.log(data.mdx.frontmatter)
-
-    const image = getImage(data.mdx.frontmatter.hero_image.childCloudinaryAsset);
-    const alt = data.mdx.frontmatter.hero_image.childCloudinaryAsset.rawCloudinaryData.context.custom.alt
-    const pgTitle = data.mdx.frontmatter.title
-    const pgSummary = data.mdx.frontmatter.summary
+    console.log(data)
+    // const image = getImage(data.file.childrenCloudinaryAsset);
+    // const alt = data.file.childrenCloudinaryAsset.rawCloudinaryData.context.custom.alt
+    // const alt = "An portrait illustration of Kevin Delahunt smiling1."
 
     return (
         <div className={container}>
-            <SubpageHeader
+            {/* <SubpageHeader
                    image={image} 
                    alt={alt}
-                   title={pgTitle}
-                   summary={pgSummary}
-            />
+                   title="About Kevin Delahunt"
+                   summary="I am a rural-Ottawa native who loves the big city. For fun, I go winter survival camping in snow shelters or I play almost any kind of card, video, board game or sport. I'm earnest, authentic and introspective. My three core values are growth, service and respect. I'm looking to contribute to your team's long term goals."
+            /> */}
             <div className={content}>
                 <AboutContent />
             </div>
@@ -38,26 +36,21 @@ function About({data}) {
 
 export const query = graphql`
     query {
-        mdx(id: {eq: "9db24596-d81c-54b6-8ce4-e2f4bf988112"}) {
-        frontmatter {
-            title
-            summary
-            hero_image {
-            childCloudinaryAsset {
-                gatsbyImageData
-                rawCloudinaryData {
-                context {
-                    custom {
-                    alt
-                    }
-                }
+        file(name: {eq: "Portrait-2.1"}) {
+        childCloudinaryAsset {
+            gatsbyImageData(placeholder: BLURRED)
+            rawCloudinaryData {
+            context {
+                custom {
+                alt
                 }
             }
             }
         }
         }
-    }`
+    }
+`
 
 export default About
 
-export const Head = () => <title>About</title>
+export const Head = () => <title>About Kevin Delahunt</title>
