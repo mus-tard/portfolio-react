@@ -11,7 +11,7 @@ function HamButton( {isOpen, handleClick} ) {
 
 
     return (
-        <button className={container} onClick={handleClick}>
+        <button className={container} onClick={handleClick} aria-label="Mobile navigation">
 
             <HamIcon
                 width="60px"
