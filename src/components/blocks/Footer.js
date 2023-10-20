@@ -1,11 +1,8 @@
 import React from 'react'
-import ArrowIcon from '../icons/ArrowIcon';
 import { 
-    line,
     email,
     contact,
     container,
-    emailContainer,
     contactContainer
 } from './footer.module.css'
 
@@ -24,7 +21,7 @@ function Footer() {
 
                         For inquiries, please email me at:
 
-                    <div className={emailContainer} id="contact">
+                    <div id="contact">
                         <div className={email}>
                             kevin.delahunt<wbr />@kevd.design
                         </div>
@@ -37,7 +34,6 @@ function Footer() {
             
 
             <aside>
-                <div className={line}></div>
                 ©{year} - Kevin Delahunt
             </aside>
 

@@ -1,18 +1,18 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 import { getImage } from 'gatsby-plugin-image';
-import AboutContent from '../../about/index.mdx'
+import AboutContent from '../../about/index.mdx';
 import { 
     content,
     container,
     
-   } from './portfolio/mdxStyles.module.css'
+   } from './portfolio/mdxStyles.module.css';
 
 import SubpageHeader from '../components/blocks/SubpageHeader';
 
 function About({data}) {
 
-    console.log(data)
+    console.log(data.mdx.frontmatter)
 
     const image = getImage(data.mdx.frontmatter.hero_image.childCloudinaryAsset);
     const alt = data.mdx.frontmatter.hero_image.childCloudinaryAsset.rawCloudinaryData.context.custom.alt
@@ -37,26 +37,26 @@ function About({data}) {
 
 
 export const query = graphql`
-query {
-    mdx(id: {eq: "9db24596-d81c-54b6-8ce4-e2f4bf988112"}) {
-      frontmatter {
-        title
-        summary
-        hero_image {
-          childCloudinaryAsset {
-            gatsbyImageData
-            rawCloudinaryData {
-              context {
-                custom {
-                  alt
+    query {
+        mdx(id: {eq: "9db24596-d81c-54b6-8ce4-e2f4bf988112"}) {
+        frontmatter {
+            title
+            summary
+            hero_image {
+            childCloudinaryAsset {
+                gatsbyImageData
+                rawCloudinaryData {
+                context {
+                    custom {
+                    alt
+                    }
                 }
-              }
+                }
             }
-          }
+            }
         }
-      }
-    }
-  }`
+        }
+    }`
 
 export default About
 
