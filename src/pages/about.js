@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+import { SEO } from "../components/seo";
 import { getImage } from 'gatsby-plugin-image';
 import { 
     content,
@@ -60,4 +61,11 @@ export const query = graphql`
 
 export default About
 
-export const Head = () => <title>About Kevin Delahunt</title>
+export const Head = () => (
+    <>
+      <title>About Kev D.</title>
+      <SEO
+        title="About Kev D."
+      />
+    </>
+  )

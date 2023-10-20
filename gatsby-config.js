@@ -8,7 +8,10 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    siteUrl: `https://www.yourdomain.tld`,
+    title: `Kev D's Portfolio`,
+    description: `Showcasing past projects to demonstrate my strengths.`,
+    image: `/Portrait-2-512.png`,
+    siteUrl: `https://kevd.design`,
   },
   flags: {
     DEV_SSR: true,
