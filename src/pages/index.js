@@ -1,6 +1,6 @@
 import * as React from "react"
 import Hero from "../components/blocks/Hero"
-import { SEO } from "../components/seo"
+import { Seo } from "../components/Seo"
 import PortfolioTiles from "../components/blocks/PortfolioTiles"
 
 
@@ -22,6 +22,6 @@ export default IndexPage
 export const Head = () => (
   <>
     <title>Kev's Portfolio</title>
-    <SEO />
+    <Seo />
   </>
 )

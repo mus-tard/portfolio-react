@@ -4,7 +4,7 @@ import {
     email,
     contact,
     container,
-    emailContainer,
+
     contactContainer
 } from './footer.module.css'
 
@@ -28,7 +28,7 @@ function Footer() {
 
                         For inquiries, please email me at:
 
-                    <div id="contact" className={emailContainer}>
+                    <div id="contact">
                         <div className={email}>
                         kevin.delahunt<wbr />@kevd.design 
                         </div>

@@ -6,7 +6,7 @@ import {
   container,
   
  } from './mdxStyles.module.css'
-import { SEO } from "../../components/seo"
+import { Seo } from "../../components/Seo"
 import { getImage } from 'gatsby-plugin-image';
 import SubpageHeader from '../../components/blocks/SubpageHeader';
 
@@ -61,7 +61,7 @@ const PortfolioItem = ( {data, children} ) => {
   export const Head = ({ data }) => (
     <>
       <title>{data.mdx.frontmatter.title}</title>
-      <SEO
+      <Seo
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.summary}
       />
