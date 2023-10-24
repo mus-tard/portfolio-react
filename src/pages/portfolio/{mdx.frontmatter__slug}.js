@@ -66,7 +66,7 @@ const PortfolioItem = ( {data, children} ) => {
       <SeoBuilder
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.summary}
-        image={data.mdx.frontmatter.hero_image.relativePath}
+        img={`portfolio/${data.mdx.frontmatter.hero_image.relativePath}`}
         pathname={`portfolio/${data.mdx.frontmatter.slug}`}
       />
     </>

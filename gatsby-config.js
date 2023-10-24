@@ -13,9 +13,6 @@ module.exports = {
     image: `/Portrait-2-512.png`,
     siteUrl: `https://kevd.design`,
   },
-  flags: {
-    DEV_SSR: true,
-  },
   plugins: [
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,

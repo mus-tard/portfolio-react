@@ -1,18 +1,20 @@
 import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-function SeoBuilder({ title, description, pathname, children }) {
+function SeoBuilder({ title, description, img, pathname, children }) {
     const { 
         title: defaultTitle, 
         description: defaultDescription, image, siteUrl 
     } = useSiteMetadata()
   
+
     const seo = {
       title: title || defaultTitle,
       description: description || defaultDescription,
-      image: `${siteUrl}${image}`,
-      url: `${siteUrl}${pathname || ``}`,
+      image: `${siteUrl}/${img}`,
+      url: `${siteUrl}/${pathname || ``}`,
     }
+
   
     return (
       <>
