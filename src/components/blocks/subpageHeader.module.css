@@ -44,6 +44,11 @@
         grid-column: 1 / span 4;
         grid-row: 1;
     }
+
+    .headerImgContainer {
+        width: 70%;
+        /* margin: 0 auto; */
+    }
 }
 
 @media screen and (min-width: 1240px) {
