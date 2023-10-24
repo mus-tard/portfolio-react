@@ -34,26 +34,28 @@ const PortfolioItem = ( {data, children} ) => {
   }
 
   export const query = graphql`
-    query ($id: String) {
-      mdx(id: {eq: $id}) {
-        frontmatter {
-          title
-          summary
-          hero_image {
-            childCloudinaryAsset {
-              gatsbyImageData(placeholder: BLURRED)
-              rawCloudinaryData {
-                context {
-                  custom {
-                    alt
-                  }
+  query ($id: String) {
+    mdx(id: {eq: $id}) {
+      frontmatter {
+        title
+        summary
+        slug
+        hero_image {
+          childCloudinaryAsset {
+            gatsbyImageData(placeholder: BLURRED)
+            rawCloudinaryData {
+              context {
+                custom {
+                  alt
                 }
               }
             }
           }
+          relativePath
         }
       }
     }
+  }
   `
 
   export default PortfolioItem
@@ -64,7 +66,8 @@ const PortfolioItem = ( {data, children} ) => {
       <Seo
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.summary}
-        image={getImage(data.mdx.frontmatter.hero_image.childCloudinaryAsset)}
+        image={data.mdx.frontmatter.hero_image.relativePath}
+        pathname={`portfolio/${data.mdx.frontmatter.slug}`}
       />
     </>
   )
