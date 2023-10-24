@@ -64,6 +64,7 @@ const PortfolioItem = ( {data, children} ) => {
       <Seo
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.summary}
+        image={getImage(data.mdx.frontmatter.hero_image.childCloudinaryAsset)}
       />
     </>
   )
