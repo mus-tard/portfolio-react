@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Seo from "../components/Seo";
+import SeoBuilder from "../components/SeoBuilder";
 import { getImage } from 'gatsby-plugin-image';
 import { 
     content,
@@ -64,7 +64,7 @@ export default About
 export const Head = () => (
     <>
       <title>About Kev D.</title>
-      <Seo
+      <SeoBuilder
         title="About Kev D."
       />
     </>

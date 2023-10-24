@@ -1,7 +1,7 @@
 import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
 
-function Seo({ title, description, pathname, children }) {
+function SeoBuilder({ title, description, pathname, children }) {
     const { 
         title: defaultTitle, 
         description: defaultDescription, image, siteUrl 
@@ -29,4 +29,4 @@ function Seo({ title, description, pathname, children }) {
     )
   }
 
-  export default Seo
+  export default SeoBuilder
