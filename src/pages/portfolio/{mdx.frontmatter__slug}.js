@@ -6,7 +6,7 @@ import {
   container,
   
  } from './mdxStyles.module.css'
-import { Seo } from "../../components/Seo"
+import Seo from "../../components/Seo"
 import { getImage } from 'gatsby-plugin-image';
 import SubpageHeader from '../../components/blocks/SubpageHeader';
 

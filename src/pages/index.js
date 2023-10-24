@@ -1,6 +1,6 @@
 import * as React from "react"
 import Hero from "../components/blocks/Hero"
-import { Seo } from "../components/Seo"
+import Seo from "../components/Seo"
 import PortfolioTiles from "../components/blocks/PortfolioTiles"
 
 
