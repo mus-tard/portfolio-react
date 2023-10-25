@@ -6,28 +6,29 @@ import { getSrc } from 'gatsby-plugin-image';
 function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgHeight, imgAlt, children }) {
   const data = useStaticQuery(graphql`
   query {
-    cloudinaryMedia(folder: {eq: "gatsby-cloudinary/hero"}) {
-      gatsbyImageData(placeholder: BLURRED)
-      context {
-        custom {
-          alt
+    file(name: {eq: "IntroductoryImage"}) {
+      childCloudinaryAsset {
+        gatsbyImageData(placeholder: BLURRED)
+        rawCloudinaryData {
+          context {
+            custom {
+              alt
+            }
+          }
         }
+        originalWidth
+        originalHeight
+        originalFormat
       }
-      cloudinaryData {
-        type
-      }
-      originalFormat
-      originalHeight
-      originalWidth
     }
   }
 `)  
 
 const fallbackImageURL = getSrc(data.cloudinaryMedia);
-const fallbackAltText = data.cloudinaryMedia.context.custom.alt
-const fallbackFormat = data.cloudinaryMedia.originalFormat
-const fallbackHeight = data.cloudinaryMedia.originalFormat
-const fallbackWidth = data.cloudinaryMedia.originalFormat
+const fallbackAltText = data.file.childcloudinaryAsset.context.custom.alt
+const fallbackFormat = data.file.childcloudinaryAsset.originalFormat
+const fallbackHeight = data.file.childcloudinaryAsset.originalHeight
+const fallbackWidth = data.file.childcloudinaryAsset.originalWidth
   
   const { 
         title: defaultTitle, 
