@@ -7,7 +7,7 @@ import {
   
  } from './mdxStyles.module.css'
 import SeoBuilder from "../../components/SeoBuilder"
-import { getImage } from 'gatsby-plugin-image';
+import { getSrc, getImage } from 'gatsby-plugin-image';
 import SubpageHeader from '../../components/blocks/SubpageHeader';
 
 const PortfolioItem = ( {data, children} ) => {
@@ -50,8 +50,10 @@ const PortfolioItem = ( {data, children} ) => {
                 }
               }
             }
+            originalHeight
+            originalWidth
+            originalFormat
           }
-          relativePath
         }
       }
     }
@@ -66,8 +68,13 @@ const PortfolioItem = ( {data, children} ) => {
       <SeoBuilder
         title={data.mdx.frontmatter.title}
         description={data.mdx.frontmatter.summary}
-        img={`portfolio/${data.mdx.frontmatter.hero_image.relativePath}`}
+        img={getSrc(data.mdx.frontmatter.hero_image.childCloudinaryAsset)}
         pathname={`portfolio/${data.mdx.frontmatter.slug}`}
+        imgType={data.mdx.frontmatter.hero_image.childCloudinaryAsset.originalFormat}
+        imgWidth={data.mdx.frontmatter.hero_image.childCloudinaryAsset.originalWidth}
+        imgHeight={data.mdx.frontmatter.hero_image.childCloudinaryAsset.originalHeight}
+        imgAlt={data.mdx.frontmatter.hero_image.childCloudinaryAsset.rawCloudinaryData.context.custom.alt}
+
       />
     </>
   )
