@@ -10,7 +10,7 @@ module.exports = {
   siteMetadata: {
     title: `Kev D's Portfolio`,
     description: `Showcasing past projects to demonstrate my strengths.`,
-    image: `/Portrait-2-512.png`,
+    image: `/Portrait-2-512-center.png`,
     siteUrl: `https://kevd.design`,
   },
   plugins: [
