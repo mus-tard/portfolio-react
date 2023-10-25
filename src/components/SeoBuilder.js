@@ -24,12 +24,15 @@ function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgH
   }
 `)  
 
-const fallbackImageURL = getSrc(data.file.childcloudinaryAsset);
-const fallbackAltText = data.file.childcloudinaryAsset.rawCloudinaryData.context.custom.alt
-const fallbackFormat = data.file.childcloudinaryAsset.originalFormat
-const fallbackHeight = data.file.childcloudinaryAsset.originalHeight
-const fallbackWidth = data.file.childcloudinaryAsset.originalWidth
+
+const fallbackImageURL = getSrc(data.file.childCloudinaryAsset);
+const fallbackAltText = data.file.childCloudinaryAsset.rawCloudinaryData.context.custom.alt
+const fallbackFormat = data.file.childCloudinaryAsset.originalFormat
+const fallbackHeight = data.file.childCloudinaryAsset.originalHeight
+const fallbackWidth = data.file.childCloudinaryAsset.originalWidth
   
+
+
   const { 
         title: defaultTitle, 
         description: defaultDescription, image, siteUrl 
