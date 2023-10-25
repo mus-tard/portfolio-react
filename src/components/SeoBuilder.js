@@ -1,9 +1,35 @@
 import React from "react"
 import { useSiteMetadata } from "../hooks/use-site-metadata"
-
+import { useStaticQuery, graphql } from 'gatsby';
+import { getSrc } from 'gatsby-plugin-image';
 
 function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgHeight, imgAlt, children }) {
-    const { 
+  const data = useStaticQuery(graphql`
+  query {
+    cloudinaryMedia(folder: {eq: "gatsby-cloudinary/hero"}) {
+      gatsbyImageData(placeholder: BLURRED)
+      context {
+        custom {
+          alt
+        }
+      }
+      cloudinaryData {
+        type
+      }
+      originalFormat
+      originalHeight
+      originalWidth
+    }
+  }
+`)  
+
+const fallbackImageURL = getSrc(data.cloudinaryMedia);
+const fallbackAltText = data.cloudinaryMedia.context.custom.alt
+const fallbackFormat = data.cloudinaryMedia.originalFormat
+const fallbackHeight = data.cloudinaryMedia.originalFormat
+const fallbackWidth = data.cloudinaryMedia.originalFormat
+  
+  const { 
         title: defaultTitle, 
         description: defaultDescription, image, siteUrl 
     } = useSiteMetadata()
@@ -12,12 +38,12 @@ function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgH
     const seo = {
       title: title || defaultTitle,
       description: description || defaultDescription,
-      image: img || image,
+      image: img || fallbackImageURL || image,
       url: `${siteUrl}/${pathname || ``}`,
-      imgType: imgType || ``,
-      imgWidth: imgWidth || ``,
-      imgHeight: imgHeight || ``,
-      imgAlt: imgAlt || `No alt text available.`,
+      imgType: imgType || fallbackFormat || ``,
+      imgWidth: imgWidth || fallbackWidth || ``,
+      imgHeight: imgHeight || fallbackHeight || ``,
+      imgAlt: imgAlt || fallbackAltText || `No alt text available.`,
     }
 
   
