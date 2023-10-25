@@ -11,7 +11,7 @@ function SeoBuilder({ title, description, img, pathname, children }) {
     const seo = {
       title: title || defaultTitle,
       description: description || defaultDescription,
-      image: `${siteUrl}/${img}`,
+      image: `${siteUrl}/${img}` || image,
       url: `${siteUrl}/${pathname || ``}`,
     }
 
@@ -26,6 +26,13 @@ function SeoBuilder({ title, description, img, pathname, children }) {
         <meta name="twitter:url" content={seo.url} />
         <meta name="twitter:description" content={seo.description} />
         <meta name="twitter:image" content={seo.image} />
+
+        <meta property="og:title" content={seo.title} />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content={seo.url} />
+        <meta property="og:image" content={seo.image} />
+        <meta property="og:description" content={seo.description} />
+
         {children}
       </>
     )
