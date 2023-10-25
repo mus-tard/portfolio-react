@@ -22,6 +22,7 @@ export default IndexPage
 export const Head = () => (
   <>
     <title>Kev's Portfolio</title>
+    <meta name="facebook-domain-verification" content="qr9m7qkef61rvhfrgivhu2jm275y6a" />
     <SeoBuilder />
   </>
 )
