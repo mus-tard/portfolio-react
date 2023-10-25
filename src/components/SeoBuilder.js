@@ -24,7 +24,7 @@ function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgH
   }
 `)  
 
-const fallbackImageURL = getSrc(data.cloudinaryMedia);
+const fallbackImageURL = getSrc(data.file.childcloudinaryAsset);
 const fallbackAltText = data.file.childcloudinaryAsset.context.custom.alt
 const fallbackFormat = data.file.childcloudinaryAsset.originalFormat
 const fallbackHeight = data.file.childcloudinaryAsset.originalHeight
