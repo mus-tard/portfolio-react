@@ -12,7 +12,7 @@ function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgH
     const seo = {
       title: title || defaultTitle,
       description: description || defaultDescription,
-      image: `${siteUrl}/${img}` || image,
+      image: img || image,
       url: `${siteUrl}/${pathname || siteUrl}`,
       imgType: imgType || ``,
       imgWidth: imgWidth || ``,
