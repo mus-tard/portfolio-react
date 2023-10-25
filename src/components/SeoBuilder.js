@@ -13,7 +13,7 @@ function SeoBuilder({ title, description, img, pathname, imgType, imgWidth, imgH
       title: title || defaultTitle,
       description: description || defaultDescription,
       image: img || image,
-      url: `${siteUrl}/${pathname || siteUrl}`,
+      url: `${siteUrl}/${pathname}`  || siteUrl,
       imgType: imgType || ``,
       imgWidth: imgWidth || ``,
       imgHeight: imgHeight || ``,
