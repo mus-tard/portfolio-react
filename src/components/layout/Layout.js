@@ -10,7 +10,6 @@ import Footer from '../blocks/Footer'
 
 
 function Layout({ children }) {
-    console.log(children.props)
 
     return (
         <>
