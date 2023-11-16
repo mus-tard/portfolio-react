@@ -18,39 +18,19 @@
 
 /* Layout Grid - End */
 
-/* Component Grid - Start */
-@media only screen and (min-width: 600px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(8, 1fr);
-    }
-
-    .content {
-        grid-column: 1 / span 8;
-        max-width: 800px;
-        margin: 0 auto;
-    }
-
+.content {
+    padding: 16px 0;
+}
+.content > * {
+    margin: 0 32px;
 }
 
-@media screen and (min-width: 1240px) {
-    .container {
-        display: grid;
-        grid-template-columns: repeat(12, 1fr);
-    }
-
-    .content {
-        grid-column: 2 / span 10;
-
-    }
+.content figure, .content figcaption{
+    max-width: 100%;
+    margin: 0;
+    
 }
 
-/* Component Grid - End */
-
-
-.content{
-    padding: 16px 32px;
-}
 .content h2 {
     margin-top: 32px;
     padding-top: 16px;
@@ -65,3 +45,13 @@
 
 
 
+
+
+@media screen and (min-width: 880px) {
+    .content * {
+        max-width: 800px;
+        margin: 0 auto;
+        
+
+    }
+}

@@ -55,6 +55,20 @@ const PortfolioItem = ( {data, children} ) => {
             originalFormat
           }
         }
+        embeddedImagesLocal {
+          id
+          childCloudinaryAsset {
+            gatsbyImageData(placeholder: BLURRED)
+            rawCloudinaryData {
+              context {
+                custom {
+                  alt
+                }
+              }
+            }
+          }
+          name
+        }
       }
     }
   }
