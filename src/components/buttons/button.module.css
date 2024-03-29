@@ -29,6 +29,22 @@
     color: #fff;
 }
 
+.ctaButton:hover{
+    background: var(--Secondary);
+}
+
+.ctaButton:active {
+    background: #585ea0;
+}
+
+.ctaButton:hover div svg path {
+    fill: var(--white);
+} 
+
+.ctaButton:active div svg path {
+    fill: var(--white);
+}
+
 .buttonText {
     flex: 1 1 0;
     text-decoration: none;
