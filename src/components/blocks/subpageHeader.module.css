@@ -9,6 +9,10 @@
     margin: 0 auto;
 }
 
+.headerImgContainer img {
+    max-height: 400px;
+}
+
 .content {
     padding: 0 16px;
 }
@@ -43,12 +47,12 @@
     .headerImgContainer {
         grid-column: 1 / span 4;
         grid-row: 1;
+        width: unset;
+
     }
 
-    .headerImgContainer {
-        width: 70%;
-        /* margin: 0 auto; */
-    }
+
+
 }
 
 @media screen and (min-width: 1240px) {
@@ -75,5 +79,6 @@
     .headerImgContainer {
         grid-column: 2 / span 5;
         grid-row: 1;
+ 
     }
 }
