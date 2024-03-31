@@ -37,10 +37,7 @@ function Hero() {
                     Kev's Portfolio
                 </h1>
                 <div className={subtitle}>
-                    Kevin Delahunt is a systems-thinking tech enthusiast 
-                    who can design, document, and develop 
-                    custom web design and content solutions 
-                    from Figma to React.js.
+                    Check out examples of design in my career.
                 </div>
             </div>
         </div>
