@@ -37,7 +37,7 @@ function Hero() {
                     Kev's Portfolio
                 </h1>
                 <div className={subtitle}>
-                    Check out examples of design in my career.
+                    Check out examples of design from my career.
                 </div>
             </div>
         </div>
