@@ -75,6 +75,10 @@
     .textContainer {
         grid-column: 5 / span 6;
     }
+
+    .mission {
+        padding-right: 200px;
+    }
 }
 
 /* Hero Grid - End */

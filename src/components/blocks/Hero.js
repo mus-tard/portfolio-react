@@ -5,6 +5,7 @@ import {
     container,
     textContainer,
     imageContainer,
+    mission
  } from './hero.module.css'
 
 function Hero() {
@@ -36,7 +37,7 @@ function Hero() {
                     Kev's Portfolio
                 </h1>
                 <div>
-                    <p>My mission is to continuously improve structures so that individuals can thrive.</p> 
+                    <p className={mission}>My mission is to continuously improve structures so that individuals can thrive.</p> 
                 </div>
             </div>
         </div>
