@@ -36,8 +36,8 @@ function Hero() {
                 <h1>
                     Kev's Portfolio
                 </h1>
-                <div className={subtitle}>
-                    Check out examples of design from my career.
+                <div>
+                    <p>My mission is to continuously improve structures so that individuals can thrive.</p> 
                 </div>
             </div>
         </div>
